@@ -3,7 +3,17 @@ const puppeteer = require("puppeteer");
 async function scrapeMediumArticles() {
   try {
     // Launch a headless browser
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+      // Add any other Puppeteer options you need
+      headless: true, // Change as needed
+      executablePath: process.env.PUPPETEER_EXECUTABLE_PATH,
+      args: [
+        "--disable-gpu",
+        "--disable-dev-shm-usage",
+        "--disable-setuid-sandbox",
+        "--no-sandbox",
+      ],
+    });
     const page = await browser.newPage();
 
     // Navigate to the URL

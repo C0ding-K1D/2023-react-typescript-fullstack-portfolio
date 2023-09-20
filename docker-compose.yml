@@ -10,7 +10,7 @@ services:
     ports:
       - 5432:5432
     volumes:
-      - db:/var/lib/postgresql/data
+      - ./docker-data/db:/var/lib/postgresql/data
     deploy:
       resources:
         limits:
@@ -31,6 +31,15 @@ services:
       - POSTGRES_HOST=db
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
+
+  frontend:
+    build:
+      context: ./client
+    ports:
+      - 5173:5173
+    depends_on:
+      - server
+    command: npm run dev -- --host 0.0.0.0
 volumes:
   db:
     driver: local
