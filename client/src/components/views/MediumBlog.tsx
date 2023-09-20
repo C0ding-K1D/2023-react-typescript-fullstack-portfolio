@@ -15,7 +15,7 @@ export default function MediumBlog() {
     async function fetchData() {
       try {
         const response = await axios.get(
-          "https://localhost:8000/v1/allarticles"
+          "https://3.21.33.228:8000/v1/allarticles"
         );
         setData(response.data);
       } catch (error) {
