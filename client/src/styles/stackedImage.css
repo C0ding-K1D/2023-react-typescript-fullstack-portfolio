@@ -37,17 +37,8 @@
   padding: 2rem;
   width: 19.875rem;
   height: 19.875rem;
-  background-color: #03a9f4;
+  background-color: #512da8;
   transform: rotate(8deg);
-}
-
-.imageDark {
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-8deg);
-  border-radius: 10%;
 }
 
 .gradientCornerRightDark {
@@ -98,18 +89,10 @@
     height: 12.5rem;
     width: 12.5rem;
   }
-  .paperDark {
-    height: 12.5rem;
-    width: 12.5rem;
-  }
 }
 
 @media screen and (max-width: 600px) {
   .paperLight {
-    height: 10.5rem;
-    width: 10.5rem;
-  }
-  .paperDark {
     height: 10.5rem;
     width: 10.5rem;
   }
