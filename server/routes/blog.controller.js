@@ -52,6 +52,7 @@ async function getRecentArticles(req, res) {
     });
 
     console.log("Articles found successfully");
+    console.log("test", recentArticles);
     res.status(200).json(recentArticles);
   } catch (error) {
     console.error(error);
